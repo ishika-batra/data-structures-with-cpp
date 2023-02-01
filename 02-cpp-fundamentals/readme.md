@@ -25,3 +25,67 @@ int main()
 }
 ```
 The **output** of the above code will be **2 4 6 8 10**.
+
+
+## Structures
+- Structures can be defined as collection of related data items under one name. Data Types can be similar or different.
+- Structure is used to define user defined data types.
+
+- Defining a structure:
+```c++
+struct Rectangle // This is a structure, user defined data type
+{
+  int length; // size of length is 4 bytes.
+  int breadth; // size of breadth is 4 bytes.
+} // Therefore,size of structure Rectangle is 8 bytes.
+```
+- To declare a variable of type structure:
+```c++
+int main()
+{
+  struct Rectangle r; // r is of size 8 bytes, Declaration of a structure.
+  struct Rectangle c={10,5}; // length=10 and breadth=5, Declaration and Initialization of a Structure.
+}
+```
+- To access a member of structure
+```c++
+int main()
+{
+  struct Rectangle r; 
+  struct Rectangle c={10,5};
+
+  r.length=15;
+  r.breadth=3;
+  cout<<"Area of rectangle is: "<<r.lenth*r.breadth;//To access a member of a structure dot operator is used.
+}
+```
+- Other example of Structure
+```c++
+struct Complex // Creating a structure for complex number,a+ib
+{
+  int real;
+  int imaginary;
+} // Structure Complex is of size 8 bytes 
+
+struct Student // Creating a structure for a student
+{
+  int roll_no;
+  char name[25];
+  char dept[10];
+  char address[50];
+} //Structure Student is of size 89 bytes 
+```
+- Array of structures
+```c++
+struct Card
+{
+  int face;
+  int shape;
+  int color;
+} //Structure Card is of size 12 bytes 
+
+int main()
+{
+  struct Card deck[52]={ {1,0,0},{2,0,0},{1,1,0},{2,1,0} } //624 bytes is size of array
+}
+```
