@@ -101,7 +101,7 @@ int main()
 ```c++
 int a=10; //data variable
 int *p; //Declaration of pointer variable
-int p=&a; //Initialization of pointer, pointer p will store address of variable a.
+p=&a; //Initialization of pointer, pointer p will store address of variable a.
 cout<<a; //This will give output 10.
 cout<<*p; //This will give output 10.
 cout<<p; //This will give output the address of a.
@@ -109,7 +109,7 @@ cout<<p; //This will give output the address of a.
 - To access heap memory using a pointer:
  To allocate memory in heap we use keyword new.
 ```c++
-#include<stdlib.h>
+
 int main()
 {
   int *p;
