@@ -89,3 +89,30 @@ int main()
   struct Card deck[52]={ {1,0,0},{2,0,0},{1,1,0},{2,1,0} } //624 bytes is size of array
 }
 ```
+
+## Pointers
+
+-Pointer is an address variable, that is meant for storing address of data and not data itself.
+-Uses of pointers:
+1.Used to access Heap memory.
+2.Useful for accessing the resources that are outside the memory.
+3.Used in parameter passing.
+
+```c++
+int a=10; //data variable
+int *p; //Declaration of pointer variable
+int p=&a; //Initialization of pointer, pointer p will store address of variable a.
+cout<<a; //This will give output 10.
+cout<<*p; //This will give output 10.
+cout<<p; //This will give output the address of a.
+```
+- To access heap memory using a pointer:
+ To allocate memory in heap we use keyword new.
+```c++
+#include<stdlib.h>
+int main()
+{
+  int *p;
+  p=new int[5];
+}
+```
