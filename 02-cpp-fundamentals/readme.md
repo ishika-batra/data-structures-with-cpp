@@ -1,6 +1,7 @@
 # C++ Basics
 
 ## Arrays
+
 - Arrays is defined as collection of similar data items.
 - Syntax: `int A[5]` , here A is an array of integer data type where we get 5 spaces. Indices will be 0,1,2,3,4.
 ```c++
@@ -28,6 +29,7 @@ The **output** of the above code will be **2 4 6 8 10**.
 
 
 ## Structures
+
 - Structures can be defined as collection of related data items under one name. Data Types can be similar or different.
 - Structure is used to define user defined data types.
 
@@ -90,10 +92,11 @@ int main()
 }
 ```
 
+
 ## Pointers
 
--Pointer is an address variable, that is meant for storing address of data and not data itself.
--Uses of pointers:
+- Pointer is an address variable, that is meant for storing address of data and not data itself.
+- Uses of pointers:
 1.Used to access Heap memory.
 2.Useful for accessing the resources that are outside the memory.
 3.Used in parameter passing.
@@ -114,5 +117,21 @@ int main()
 {
   int *p;
   p=new int[5];
+}
+```
+
+## References 
+
+- A reference is a nickname given to a variable.
+- Useful in parameter passing.
+```c++
+int main()
+{
+  int a=10;
+  int &r=a; // r is a reference for variable a.
+  cout<<a; // Output will be 10.
+  r++;
+  cout<<r; // Output will be 11.
+  cout<<a; //Output will be 11.
 }
 ```
