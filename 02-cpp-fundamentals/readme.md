@@ -135,3 +135,49 @@ int main()
   cout<<a; //Output will be 11.
 }
 ```
+
+## Pointers to Structures
+
+- Creating static object.
+
+```c++
+//Creating a structure
+struct Rectangle
+{
+  int length;
+  int breadth;
+};
+
+int main()
+{
+  Rectangle r = {10, 5}; // Creating a object of structureRectangle
+  Rectangle *p = &r; // Making a pointer to access r object
+  cout << "Size of r: " << sizeof(r) << endl; // Printing size of object r
+  cout << "Size of p: " << sizeof(p) << endl; // Printing size of pointer
+  r.length = 15; // Changing length to 15 using r object
+  cout << r.length << endl;
+  p->length = 20; // Changing length to 20 using pointer
+  cout << r.length << endl;
+}
+```
+- Creating dynamic object in heap
+
+```c++
+//Creating a structure
+struct Rectangle
+{
+  int length;
+  int breadth;
+};
+
+int main()
+{
+  Rectangle *p;
+  p = new Rectangle; // Dynamic allocation in heap
+  p->length = 15;
+  p->breadth = 7;
+  cout << p->length << endl;
+  cout << p->breadth << endl;
+}
+
+```
