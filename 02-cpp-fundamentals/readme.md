@@ -181,3 +181,30 @@ int main()
 }
 
 ```
+
+## Functions 
+
+- Function is a piece of code which performs a specific task.
+- Function is a group of related instructions which performs a specific task.
+- Functions are called as modules or procedures.
+- Monolithic programming is programming everything under main function.
+- Modular programming or procedural programming is making a program break into smaller pieces of code and writing them in different functions and integrating them in main function.
+
+```c++
+int add(int a, int b) // Declaration of a function, a and b are formal parameters.
+{
+  // Definition of function
+  int c;
+  c = a + b;
+  return c;
+}
+int main()
+{
+  int x = 2, y = 3;
+  int sum;
+  sum = add(x, y); // Calling function, x and y are actual parameters.
+  cout << "Sum: " << sum;
+}
+```
+- Benefit of function is that, the function will have it's own activation record, it's separate set of variable will be there inside the memory. When function is called they are created and when their function terminates they are destroyed.
+- Function cannot access the variables of main and main cannot access variables of function.
