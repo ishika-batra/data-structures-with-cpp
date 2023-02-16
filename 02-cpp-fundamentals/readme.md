@@ -208,3 +208,74 @@ int main()
 ```
 - Benefit of function is that, the function will have it's own activation record, it's separate set of variable will be there inside the memory. When function is called they are created and when their function terminates they are destroyed.
 - Function cannot access the variables of main and main cannot access variables of function.
+
+
+## Parameter passing methods
+- There are 3 parameter passing methods:
+1. Call by value
+2. Call by address
+3. Call by reference
+
+#### 1. Call by value
+
+- In call by value the changes done in formal parameters are not reflected in actual parameters.
+- We  should use call by value when we don't want to modify actual parameters.
+- call by value should be used when the function is returning some results.
+- Swap function should not be done using call by value. Add function can be done using call by value.
+
+```c++
+void swap(int x, int y)//10 and 20 passed in formal parameters
+{
+int temp;
+temp=x;
+x=y;
+y=temp; //x=20 y=10
+}
+int main()
+{
+  int a=10;
+  int b=20;
+  swap(a,b);
+  cout<<a<<b;// a=10, b=20
+}// Not swapped
+```
+#### 2. Call by address
+
+- In call by address the address of actual parameters are passed to formal parameters and formal parameters must be pointers.
+- Any changes done in the function will modify actual parameters.
+- Swap function should use call by address.
+
+```c++
+void swap(int *x, int *y)//10 and 20 passed in formal parameters
+{
+int temp;
+temp=*x;
+*x=*y;
+*y=temp; //x=20 y=10
+}
+int main()
+{
+  int a=10;
+  int b=20;
+  swap(&a,&b);
+  cout<<a<<b; // a=20, b=10
+} // Values got swapped
+```
+#### 3. Call by reference
+
+```c++
+void swap(int &x, int &y)//10 and 20 passed in formal parameters
+{
+int temp;
+temp=x;
+x=y;
+y=temp; //x=20 y=10
+}
+int main()
+{
+  int a=10;
+  int b=20;
+  swap(a,b);
+  cout<<a<<b;// a=20, b=10
+}// swapped
+```
