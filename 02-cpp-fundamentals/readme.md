@@ -280,7 +280,7 @@ int main()
 }// swapped
 ```
 
-### Array as parameter
+## Array as parameter
 - Arrays are only pass by address.
 - Syntax of pointer to array is ``` int A[]```. 
 - Can also be written as ```int *A```, this is general method.
@@ -322,4 +322,85 @@ int main()
   }
   return 0;
 }
+```
+
+## Structure as Parameter
+
+#### Using call by Value
+
+- Here we cannot modify the values.
+
+```c++
+struct Rectangle
+{
+  int length;
+  int breadth;
+}
+int area(struct Rectangle r1)
+{
+  return r1.length*r1.breadth;
+}
+int main()
+{
+  struct Rectangle r={10,5};
+  cout<<area(r);
+}
+```
+#### Using call by reference
+
+- Here we can modify the values.
+
+```c++
+struct Rectangle
+{
+  int length;
+  int breadth;
+}
+int 
+int area(struct Rectangle &r1)
+{
+  r1.length ++;
+  return r1.length*r1.breadth;
+}
+int main()
+{
+  struct Rectangle r={10,5};
+  cout<<area(r);
+}
+```
+#### Using call by address
+```c++
+struct Rectangle
+{
+  int length;
+  int breadth;
+}
+void changeLength(struct Rectangle *p, int l)
+{
+  p->length=l; // Changing the original length using pointer
+}
+ int main()
+ {
+  struct Rectangle r={10,5};
+  changeLength(&r,20);
+ }
+```
+- As we know we can only pass array as a parameter using call by address but if a structure is having an array we can use call by value to pass an array.
+- We can cannot modify the values of array, if we are using call by value.
+```c++
+ struct Test
+ {
+  int A[5];
+  int n;
+ }
+ void func(struct Test t1)
+ {
+  t1.A[0]=10;
+  t1.A[1]=9;
+ }
+ int main()
+ {
+  struct Test t={{2,,4,6,8,10},5};
+  func(t);
+ }
 ```
