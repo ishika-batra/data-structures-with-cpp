@@ -335,7 +335,7 @@ struct Rectangle
 {
   int length;
   int breadth;
-}
+};
 int area(struct Rectangle r1)
 {
   return r1.length*r1.breadth;
@@ -355,8 +355,8 @@ struct Rectangle
 {
   int length;
   int breadth;
-}
-int 
+};
+
 int area(struct Rectangle &r1)
 {
   r1.length ++;
@@ -374,7 +374,7 @@ struct Rectangle
 {
   int length;
   int breadth;
-}
+};
 void changeLength(struct Rectangle *p, int l)
 {
   p->length=l; // Changing the original length using pointer
@@ -392,7 +392,7 @@ void changeLength(struct Rectangle *p, int l)
  {
   int A[5];
   int n;
- }
+ };
  void func(struct Test t1)
  {
   t1.A[0]=10;
@@ -400,7 +400,7 @@ void changeLength(struct Rectangle *p, int l)
  }
  int main()
  {
-  struct Test t={{2,,4,6,8,10},5};
+  struct Test t={{2,4,6,8,10},5};
   func(t);
  }
 ```
