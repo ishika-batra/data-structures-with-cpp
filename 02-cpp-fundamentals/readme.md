@@ -279,3 +279,47 @@ int main()
   cout<<a<<b;// a=20, b=10
 }// swapped
 ```
+
+### Array as parameter
+- Arrays are only pass by address.
+- Syntax of pointer to array is ``` int A[]```. 
+- Can also be written as ```int *A```, this is general method.
+
+```c++
+void func(int A[], int n)//Array is passed by address and number of elements is passed by value.
+{
+  for(int i=0; i<n;i++) // If we modify any element in this function the array will get changed.
+  {
+    cout<<A[i];
+  }
+}
+int main()
+{
+  int A[5]={1,2,3,4,5};
+  func(A,5);
+}
+```
+- Returning an array as parameter:
+```c++
+int *func(int size) // return type is pointer
+{
+  int *p;
+  p = new int[size]; // Creating array in heap
+  for (int i = 0; i < size; i++)
+  {
+    p[i] = i + 1; // initializing array in heap
+    return p;     // returning a pointer
+  }
+}
+int main()
+{
+  int *ptr, sz = 5;
+  ptr = func(sz); // Passing size of array to func
+
+  for (int i = 0; i < sz; i++) // Printing elements of array
+  {
+    cout << ptr[i] << endl;
+  }
+  return 0;
+}
+```
