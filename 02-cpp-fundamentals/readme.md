@@ -439,4 +439,36 @@ int main()
 
 
 ## Classes and Constructors in C++
-- 
+- Class contains data members and member functions.
+
+```c++
+class Rectangle
+{
+private: // private access modifier for data members
+  int length;
+  int breadth;
+
+public: // public access modifiers for member functions
+  Rectangle(int l, int b)
+  {
+    length = l;
+    breadth = b;
+  }
+  int area()
+  {
+    return length * breadth;
+  }
+  void changeLength(int l)
+  {
+    length = l;
+  }
+};
+
+int main()
+{
+  Rectangle r(10, 5); // Object created and initialized
+  r.area();
+  r.changeLength(20);
+}
+
+```
