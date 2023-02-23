@@ -385,6 +385,9 @@ void changeLength(struct Rectangle *p, int l)
   changeLength(&r,20);
  }
 ```
+- Call by value uses "." operator.
+- Call by address uses "->" operator.
+
 - As we know we can only pass array as a parameter using call by address but if a structure is having an array we can use call by value to pass an array.
 - We can cannot modify the values of array, if we are using call by value.
 ```c++
@@ -404,3 +407,36 @@ void changeLength(struct Rectangle *p, int l)
   func(t);
  }
 ```
+## Structure and Functions in C 
+```c++
+struct Rectangle
+{
+  int length;
+  int breadth;
+};
+void initialize(struct Rectangle *r, int l, int b) // Call by address
+{
+  r->length = l; 
+  r->breadth = b;
+}
+int area(struct Rectangle r) // Call by value
+{
+  return r.length * r.breadth;
+}
+void changeLength(struct Rectangle *r, int l) // Call by address
+{
+  r->length = l;
+}
+int main()
+{
+  struct Rectangle r;
+
+  initialize(&r, 15, 10);
+  cout << area(r);
+  changeLength(&r, 20);
+}
+```
+
+
+## Classes and Constructors in C++
+- 
