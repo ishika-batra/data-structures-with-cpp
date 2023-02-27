@@ -472,3 +472,57 @@ int main()
 }
 
 ```
+
+## Types of Program
+
+#### Monolithic Program
+
+- Here we write everything in the main function.
+- Used for short programs.
+
+```c++
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int main()
+{
+  int length = 0;
+  int breadth = 0;
+  cout << "Enter the length and breadth of Rectangle: " << endl;
+  cin >> length;
+  cin >> breadth;
+  cout << " The Area of Rectangle is: " << length * breadth << endl;
+  cout << "The Perimeter of Rectangle is: " << 2 * (length + breadth) << endl;
+}
+```
+#### Modular Program
+
+- In Monolithic Program it is difficult to make changes and detect errors.
+- Monolithic Program can become lengthy and difficult to understand.
+- In modular program we break few tasks into functions which makes it easy to understand and solve errors if any.
+- In modular program we let the user interactions done by main function only and do processing in other functions.
+
+```c++
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int area(int l, int b)
+{
+  return l * b;
+}
+int peri(int l, int b)
+{
+  return 2 * (l + b);
+}
+int main()
+{
+  int length = 0, breadth = 0;
+  cout << "Enter the length and breadth: " << endl;
+  cin >> length;
+  cin >> breadth;
+  int a = area(length, breadth);
+  int p = peri(length, breadth);
+  cout << " The Area of Rectangle is: " << a << endl;
+  cout << "The Perimeter of Rectangle is: " << p << endl;
+}
+```
