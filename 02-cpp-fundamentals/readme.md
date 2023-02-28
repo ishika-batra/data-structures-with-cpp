@@ -570,3 +570,13 @@ int main()
 }
 
 ```
+
+## Class and Constructors
+
+- ``` Rectangle(){length=1,breadth=1;}``` This is a default constructor.
+- ```Rectangle(int l, int b);``` This is a parameterized constructor.
+- ``` int area();``` and ``` int perimeter();``` are facilitators, they perform operations on data member of object.
+- '''int getLength(){return length;}''' This is accessor.
+- ```void setLength(int l){length=l;}``` This is mutator.
+- ``` ~Rectangle();``` This is a destructor.
+- These functions can be written outside the class using scope resolution ```::```.
