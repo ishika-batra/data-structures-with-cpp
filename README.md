@@ -10,5 +10,5 @@ For more info about a specific topic, navigate to that topic's directory and che
 
 1. [Introduction](/01-introduction/)
 2. [C++ Fundamentals](/02-cpp-fundamentals/)
-
+3. [DSA Introduction](/03-dsa-introduction/)
 
