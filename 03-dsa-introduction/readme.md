@@ -13,5 +13,15 @@
 - This data is used for analysis and prediction.
 - Algorithms used to study this data is called data mining algorithms.
 
-## Big data
+## Big Data
 - Collecting and study the large amount of continuously generating data is called big data.
+
+## Static vs Dynamic memory allocation
+
+- Area that is occupied by the program in the main memory is called the code section.
+#### Static memory allocation
+- Variables declared in the program their memory will be created inside the stack.
+- The portion of the memory given to a function inside the stack is called activation record of that function.
+- This is static memory allocation,as how many bytes of memory is required by the function was decided at the compile time, 
+
+
